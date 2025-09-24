@@ -1,0 +1,5 @@
+order:
+  message: "Order service running in DEV mode"
+logging:
+  level:
+    root: DEBUG

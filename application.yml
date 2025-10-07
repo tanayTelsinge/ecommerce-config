@@ -1,0 +1,12 @@
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    endpoint: http://localhost:9411/api/v2/spans
+
+logging:
+  pattern:
+    console: '{"timestamp":"%d{yyyy-MM-dd HH:mm:ss.SSS}", "level":"%p",
+               "service":"${spring.application.name}",
+               "trace":"%X{traceId:-}", "span":"%X{spanId:-}", "message":"%m"}%n'

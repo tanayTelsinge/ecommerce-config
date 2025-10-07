@@ -7,3 +7,11 @@ spring:
 
 order:
   message: "Order service - default config"
+## Eureka Client knows where the Eureka Server is
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance: ## its adding host name in url - telsinge_pc:order-service:8080
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
